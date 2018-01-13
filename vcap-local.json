@@ -1,0 +1,15 @@
+{
+  "services": {
+    "conversation": [
+      {
+        "label": "conversation",
+        "name": "diagnostician-bot-conversation",
+        "credentials": {
+            "url": "https://gateway.watsonplatform.net/conversation/api",
+            "password": "",
+            "username": ""
+        }
+      }
+    ]
+  }
+}

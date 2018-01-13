@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Arceus: Your personal diagnostician</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/stylesheets/chatpages.css">
+    <link rel="stylesheet" href="/stylesheets/benefit.css">
+    <link rel="stylesheet" href="/stylesheets/ana.css">
+    <!-- These can be removed -->
+    <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style>
+       #map {
+        height: 80%;
+        width: 100%;
+       }
+    </style>
+</head>
+
+<body class="homePage" onload="userMessage('');">
+    <header>
+        <div class="banner">
+            <div class="titleArea">
+                <div class="name"><a class="home" href=".">Hey there! meet Arceus - Your personal diagnostician.</a></div>
+            </div>
+            <div class="loginArea">
+                <div id="bookatest" class="menu"><a class="menulink" href="./booktest">Book a test</a></div>
+                <div id="logout" class="menu"><a class="menulink" href="./logout">Logout</a></div>
+                <div id="status "></div>
+            </div>
+            <a href = "https://github.com/IBM-Bluemix/cloudco-insurance"><img height="25px" src = "images/github.svg"/></a>
+        </div>
+    </header>
+    <section class="healthLayout">
+        <div class="benefitkit">
+            <div class="benefitdata">
+                <div id="header" class="header">Locate</div>
+                <div id="map"></div>
+                <div id="lonlat">
+                    <input type="hidden" name="lat" id="userLat" value="" />
+                    <input type="hidden" name="lon" id="userLon" value="" />
+                </div>
+            </div>
+        </div>
+        <div class="chatbot">
+            <div class = "anaBanner">Questions? Try asking Arceus.</div>
+            <div id="chatBox" class="dialogcontainer"></div>
+            <input type = text id="chatMessage" class="dialoginput" placeholder="Type your message here " onkeypress="return newEvent(event)"></input>
+        </div>
+    </section>
+</body>
+<script src="src/hmac-md5.js"></script>
+<script src="src/enc-base64-min.js"></script>\
+<script src="src/maps.js"></script>
+<script src="src/personaldiagnostician.js"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlUtEGmXHWyPazsYJ12tiH8tnyztU7pn4&callback=initMap">
+</script>
+
+</html>

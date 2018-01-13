@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Arceus: Your personal diagnostician</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/stylesheets/chatpages.css">
+    <link rel="stylesheet" href="/stylesheets/benefit.css">
+    <link rel="stylesheet" href="/stylesheets/ana.css">
+    <!-- These can be removed -->
+    <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style>
+       #map {
+        height: 80%;
+        width: 100%;
+       }
+    </style>
+</head>
+
+<body class="homePage" onload="userMessage('', 'api/medlab');">
+    <header>
+        <div class="banner">
+            <div class="titleArea">
+                <div class="name"><a class="home" href=".">Hey there! meet Arceus - Your personal diagnostician.</a></div>
+            </div>
+            <div class="loginArea">
+                <div id="diagnose" class="menu"><a class="menulink" href="./diagnose">Diagnose yourself</a></div>
+                <div id="logout" class="menu"><a class="menulink" href="./logout">Logout</a></div>
+                <div id="status "></div>
+            </div>
+            <a href = "https://github.com/IBM-Bluemix/cloudco-insurance"><img height="25px" src = "images/github.svg"/></a>
+        </div>
+    </header>
+    <section class="healthLayout">
+        <div class="tests" style="min-width: 400px">
+            <span><h1>Tests we offer.</h1></span>
+            <ul>
+                <li>Antinuclear Antibody Test</li>
+                <li>CA 125</li>
+                <li>CAT Scan</li>
+                <li>Chemotherapy</li>
+                <li>Colonoscopy</li>
+                <li>Complete Blood Count</li>
+                <li>Coronary Artery Bypass Graft (CABG)</li>
+                <li>Cortisone Injection</li>
+                <li>Creatinine Blood Test</li>
+                <li>Electrolytes</li>
+                <li>Hemoglobin</li>
+                <li>Hysterectomy</li>
+                <li>Lap Band Surgery (Gastric Banding)</li>
+                <li>Liver Blood Tests</li>
+                <li>MRI Scan</li>
+                <li>Pap Smear</li>
+                <li>Thyroid Blood Tests</li>
+                <li>Total Hip Replacement</li>
+                <li>Total Knee Replacement</li>
+                <li>Tuberculosis Skin Test (PPD Skin Test)</li>
+                <li>Ultrasound</li>
+            </ul>
+        </div>
+        <div class="chatbot" style="min-height: 90%; margin-left: 750px">
+            <div class = "anaBanner">Book your test.</div>
+            <div id="chatBox" class="dialogcontainer"></div>
+            <input type = text id="medLabChatMessage" class="dialoginput" placeholder="Type your message here " onkeypress="return newEvent(event)"></input>
+        </div>
+    </section>
+</body>
+<script src="src/hmac-md5.js"></script>
+<script src="src/enc-base64-min.js"></script>\
+<script src="src/maps.js"></script>
+<script src="src/personaldiagnostician.js"></script>
+</html>

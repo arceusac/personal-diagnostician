@@ -1,0 +1,25 @@
+extends ../layout
+block content
+      .wrapper
+        form.form-signup(method='post', action='/register')
+          h3.form-signup-heading Register
+          |
+          - if(message){
+          p(style='color:red') #{message}
+          - }
+          input.form-control(type='text', name='fname', placeholder='First Name')
+          |
+          input.form-control(type='text', name='lname', placeholder='Last Name')
+          |
+          input.form-control(type='text', name='birthyear', placeholder='Birth Year')
+          |
+          input.form-control(type='text', name='mobile', placeholder='Mobile')
+          |
+          input.form-control(type='text', name='username', placeholder='Username')
+          |
+          input.form-control(type='password', name='password', placeholder='Password')
+          label.checkbox
+          |
+          button.btn.btn-lg.btn-primary.btn-block(type='submit') Register
+          br
+          a.inlink(href='/login') Have an account? Login
